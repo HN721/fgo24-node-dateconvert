@@ -33,7 +33,7 @@ rl.question("Masukan Tanggal = ", (date) => {
 rl.question("Masukan Tanggal : ", (input) => {
   try {
     const data = input.split("-").join("/");
-    if (data.length === 10) {
+    if (data.length !== 10) {
       throw new Error("Harus 10 Angka");
     }
     if (/[a-zA-Z]/.test(data)) {
