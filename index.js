@@ -16,5 +16,16 @@ rl.question("Masukan Tanggal = ", (date) => {
     }
   }
 
-    rl.close();
+  rl.close();
+});
+// Tanpa Package
+
+rl.question("Masukan Tanggal : ", (input) => {
+  const data = input.split("-").join("/");
+  if (data.length === 10 || /[a-zA-Z]/.test(data)) {
+    console.log("Format Tanggal Salah");
+  }else{
+  console.log(data)
+  }
+  rl.close();
 });
