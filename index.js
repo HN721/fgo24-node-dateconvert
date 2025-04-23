@@ -7,8 +7,7 @@ const rl = readline.createInterface({
 rl.question("Masukan Tanggal = ", (date) => {
   try {
     if (date.length !== 10 || date.includes("/")) {
-      const y = new Error("Harus 10 Angka");
-      throw y;
+      throw new Error("Harus 10 Angka");
     } else {
       const input = moment(date, "DD-MM-YYYY").format("DD/MM/YYYY");
       if (input === "Invalid date") {
