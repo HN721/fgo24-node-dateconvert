@@ -5,7 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 rl.question("Masukan Tanggal = ", (date) => {
-  if (date.length !== 10) {
+  if (date.length !== 10 && date.includes("/")) {
     console.log("Format Tanggal Salah");
   } else {
     const input = moment(date, "DD-MM-YYYY").format("DD/MM/YYYY");
@@ -16,5 +16,5 @@ rl.question("Masukan Tanggal = ", (date) => {
     }
   }
 
-  //   rl.close();
+    rl.close();
 });
